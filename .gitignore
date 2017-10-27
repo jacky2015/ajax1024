@@ -1,0 +1,17 @@
+/.idea
+.DS_Store
+src/.DS_Store
+src/components/.DS_Store
+/h5/assets/build
+/h5/test
+/h5/unpackage
+/h5.zip
+/.project
+/h5/.project
+/node_modules
+npm-debug.log
+/h5/manifest-bak.json
+/h5/unpackage/
+.vscode/
+h5/manifest.json
+package-lock.json
