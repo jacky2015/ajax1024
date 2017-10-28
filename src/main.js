@@ -7,7 +7,7 @@ import thunk from 'redux-thunk';
 import {routerMiddleware, routerReducer,syncHistoryWithStore} from 'react-router-redux';
 import {Router, Link, IndexRoute, Route, hashHistory, browserHistory} from 'react-router';
 import reducer from './redux/reducers/'
-import 'babel-polyfill'; //加入JS语法兼容
+import 'babel-polyfill'; //加入JS语法兼容1
 
 import {Demo} from './Demo';
 import {Demo2} from './Demo2';
