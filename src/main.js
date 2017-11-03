@@ -9,9 +9,12 @@ import {Router, Link, IndexRoute, Route, hashHistory, browserHistory} from 'reac
 import reducer from './redux/reducers/'
 import 'babel-polyfill'; //加入JS语法兼容
 
-import {Demo} from './Demo';
-import {Demo2} from './Demo2';
-import {Demo3} from './Demo3';
+import {Home} from './components/home/Main';
+import {Product} from './components/Product/Main';
+import {VIP} from './components/Vip/Main';
+import {Discover} from './components/Discover/Main';
+import {User} from './components/User/Main';
+
 
 let finalCreateStore = compose(applyMiddleware(routerMiddleware(browserHistory),thunk), window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore);
 let store = finalCreateStore(reducer);
@@ -21,9 +24,12 @@ const history = syncHistoryWithStore(browserHistory, store);
 ReactDOM.render((
     <Provider store={store}>
         <Router history={history}>
-            <Route path="/index" component={Demo} />
-            <Route path="/index2" component={Demo2} />
-            <Route path="/index3" component={Demo3} />
+            <Route path="/" component={Home} />
+            <Route path="/index" component={Home} />
+            <Route path="/product" component={Product} />
+            <Route path="/vip" component={VIP} />
+            <Route path="/discover" component={Discover} />
+            <Route path="/user" component={User} />
         </Router>
     </Provider>
 ), document.getElementById('root'));
